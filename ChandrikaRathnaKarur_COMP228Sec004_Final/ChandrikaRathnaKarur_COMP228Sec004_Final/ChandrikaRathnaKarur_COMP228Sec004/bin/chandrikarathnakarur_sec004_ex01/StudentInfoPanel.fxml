@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="322.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chandrikarathnakarur_sec004_ex01.StudentData">
+   <children>
+      <Pane layoutX="-128.0" layoutY="-193.0" prefHeight="246.0" prefWidth="338.0" />
+      <Label layoutX="210.0" layoutY="21.0" text="Student Info search by City Name" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="70.0" text="City Name:" />
+      <TextField fx:id="searchCityName" layoutX="94.0" layoutY="66.0" />
+      <Button fx:id="searchQuery" layoutX="265.0" layoutY="66.0" mnemonicParsing="false" onAction="#getAndPutResults" text="Search" />
+      <TableView fx:id="studentDataTable" layoutX="7.0" layoutY="108.0" onSort="#getAndPutResults" prefHeight="200.0" prefWidth="728.0">
+        <columns>
+          <TableColumn fx:id="StudentID" prefWidth="81.0" text="STUDENTID" />
+          <TableColumn fx:id="FirstName" prefWidth="89.0" text="FIRSTNAME" />
+            <TableColumn fx:id="LastName" prefWidth="92.0" text="LASTNAME" />
+            <TableColumn fx:id="Address" prefWidth="186.0" text="ADDRESS" />
+            <TableColumn fx:id="City" prefWidth="112.0" text="CITY" />
+            <TableColumn fx:id="Province" prefWidth="77.0" text="PROVINCE" />
+            <TableColumn fx:id="PostalCode" prefWidth="90.0" text="POSTALCODE" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
